@@ -1,0 +1,129 @@
+/* Make html and body full height and enable full page scroll */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto; /* Scroll on whole page */
+}
+
+/* Background image with subtle dark gradient overlay */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1470&q=80') !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  color: white;
+}
+
+/* Main container */
+.app-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  margin: 40px auto 60px auto;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  /* Removed fixed height and internal scroll */
+}
+
+/* Clock styling */
+#clock {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Weather info text */
+#weather p {
+  margin: 6px 0;
+  font-size: 1.1rem;
+}
+
+/* Button styling */
+#get-forecast-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#get-forecast-btn:hover {
+  background-color: #1565c0;
+}
+
+/* Forecast container with horizontal scroll */
+.forecast-container {
+  margin-top: 20px;
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  gap: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #1976d2 transparent;
+}
+
+.forecast-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.forecast-container::-webkit-scrollbar-thumb {
+  background-color: #1976d2;
+  border-radius: 4px;
+}
+
+/* Each forecast day box */
+.forecast-day {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 14px 16px;
+  min-width: 120px;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
+  user-select: none;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.forecast-day:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.forecast-day img {
+  width: 60px;
+  height: 60px;
+  margin: 8px 0;
+}
+
+/* Map container styling */
+#map {
+  height: 300px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  user-select: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .app-container {
+    margin: 20px 20px 40px 20px;
+  }
+  #clock {
+    font-size: 2.2rem;
+  }
+  #map {
+    height: 250px;
+  }
+}
