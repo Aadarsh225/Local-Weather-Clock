@@ -36,3 +36,8 @@ In `script.js`, find the line:
 
 ```js
 const OPENWEATHER_API_KEY = 'YOUR_API_KEY_HERE';
+
+## 👨‍💻 Author
+
+[Created with 💙 by Aadarsh Singh](https://github.com/Aadarsh225)
+
